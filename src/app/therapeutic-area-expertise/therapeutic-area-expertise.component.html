@@ -1,0 +1,26 @@
+<section class="therapeutic-page min-h-screen py-8 md:py-10 px-4 md:px-8">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center max-w-5xl mx-auto">
+      <!-- <span class="section-kicker">Our Experience</span> -->
+      <h1 class="section-title mt-2">{{ sectionTitle }}</h1>
+      <div class="section-divider" aria-hidden="true"></div>
+      <p class="text-sm md:text-base text-gray-600 leading-relaxed">
+        {{ sectionContent }}
+      </p>
+      <div class="trial-pill mt-4">{{ trialHighlight }}</div>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5 mt-8 md:mt-10">
+      <article
+        *ngFor="let area of therapeuticAreas; let i = index"
+        class="area-card rounded-2xl px-5 py-4 border border-[#dbeafe]"
+        [class.alt]="i % 2 === 1"
+      >
+        <div class="flex items-center gap-3">
+          <span class="area-icon" aria-hidden="true">{{ i + 1 }}</span>
+          <h3 class="text-lg font-semibold text-[#1f2937]">{{ area }}</h3>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

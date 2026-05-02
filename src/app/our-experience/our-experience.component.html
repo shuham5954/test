@@ -1,0 +1,67 @@
+<section
+  id="ourExperience"
+  data-aos="fade-up"
+  data-aos-delay="200"
+  data-aos-duration="700"
+  class="bg-white"
+>
+  <div class="relative h-[280px] md:h-[360px]">
+    <img
+      src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80"
+      alt="Clinical research collaboration"
+      class="w-full h-full object-cover"
+    />
+    <div
+      class="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/75 flex items-center justify-center"
+    >
+      <div class="text-center text-white px-4">
+        <h2 class="text-4xl md:text-5xl font-bold mb-3">Our Experience</h2>
+        <p class="text-lg md:text-xl text-blue-100 max-w-2xl mx-auto">
+          Trusted execution across the clinical trial lifecycle—aligned with the same rigor that defines PharosCura.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container mx-auto px-4 py-14 md:py-16">
+    <div class="max-w-3xl mx-auto text-center mb-12 md:mb-14">
+      <blockquote class="text-xl italic text-gray-600 border-blue-500 pl-4">
+        We bring operational depth—from study start-up through close-out—so sponsors can rely on predictable delivery,
+        transparent communication, and quality that meets global standards.
+      </blockquote>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14 md:mb-16">
+      <div
+        *ngFor="let s of stats"
+        data-aos="fade-up"
+        data-aos-delay="150"
+        data-aos-duration="600"
+        class="text-center p-6 rounded-lg bg-gray-50 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-100"
+      >
+        <div class="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{{ s.value }}</div>
+        <p class="text-gray-700 text-sm leading-relaxed">{{ s.label }}</p>
+      </div>
+    </div>
+
+    <div class="max-w-3xl mx-auto text-center mb-8">
+      <h3 class="text-2xl md:text-3xl font-bold text-gray-800">Where our experience shows up every day</h3>
+      <p class="text-gray-600 mt-3">
+        Operational focus areas teams routinely lean on when designing and running your studies.
+      </p>
+    </div>
+
+    <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+      <span
+        *ngFor="let area of focusAreas"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-duration="500"
+        [routerLink]="area.route"
+        class=" cursor-pointer inline-flex items-center rounded-full px-4 py-2 text-sm md:text-base font-medium text-white bg-[#2563EB] hover:bg-[#3C539E] transition-colors duration-300 shadow-md"
+      >
+        {{ area.label }}
+      </span>
+    </div>
+  </div>
+</section>

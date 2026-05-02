@@ -1,0 +1,47 @@
+<section id = "services"  data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" class="w-full mx-auto py-10 bg-gray-50 dark:bg-[#3F57A2] dark:text-white">
+    <!-- Title -->
+    <!-- <div
+      class="w-fit  px-2 mx-4 rounded-md text-2xl font-semibold  ">
+      Services</div> -->
+    <div  data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" class="w-fit px-2 mx-auto rounded-md text-5xl font-semibold text-center ">
+      Our Services</div>
+  
+    <div *ngFor="let item of servicesData" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700" class="w-full h-full flex flex-col items-center md:py-4 py-10">
+    
+
+      <!-- left side content  -->
+
+      <div *ngIf="(item.id % 2 ) == 0" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700"
+        class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-4">
+        <!--  -->
+        <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="{{item.imgUrl}}" alt="billboard image" />
+  
+        <div class="md:w-[50%] w-full bg-gray-100 dark:bg-[#3F57A2] dark:text-gray-400 md:p-4 p-0 rounded-md">
+          <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">{{item.header}}</h2>
+          <p class="text-md mt-4">{{item.description}}</p>
+        </div>
+  
+      </div>
+
+
+    <!-- right side content  -->
+      <div *ngIf="(item.id % 2 ) == 1" data-aos="fade-up" data-aos-delay="200" data-aos-duration="700"
+        class="xl:w-[80%] sm:w-[85%] w-[90%] mx-auto flex md:flex-row flex-col flex-col-reverse lg:gap-4 gap-2 justify-center lg:items-stretch md:items-center mt-6">
+        <div class="md:w-[50%] w-full bg-gray-100 dark:bg-[#3F57A2] dark:text-gray-400 md:p-4 p-0 rounded-md">
+          <h2 class="text-3xl font-semibold text-gray-900 dark:text-white">{{item.header}}</h2>
+  
+          <p class="text-md mt-4">{{item.description}}</p>
+        </div>
+        <!--  -->
+        <img class="md:w-[50%] w-full md:rounded-t-lg rounded-sm" src="{{item.imgUrl}}" alt="billboard image" />
+  
+      </div>
+
+
+
+
+
+    </div>
+  </section>
+  
+  <!-- Photo by '@candjstudios' & '@framesforyourheart' on Unsplash -->

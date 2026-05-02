@@ -1,0 +1,157 @@
+.site-network-page {
+  background: #f9fafb;
+}
+
+.section-header {
+  max-width: 60rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-kicker {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #2563eb;
+}
+
+.section-title {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0f172a;
+  margin-bottom: 0.35rem;
+}
+
+.section-divider {
+  width: 84px;
+  height: 3px;
+  background: #2563eb;
+  border-radius: 999px;
+  margin: 0 auto 0.9rem auto;
+}
+
+.site-box {
+  min-height: 82px;
+  background: #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.site-box-accent {
+  width: 4px;
+  min-height: 2.5rem;
+  border-radius: 999px;
+  background: #2563eb;
+}
+
+.site-box.alt {
+  background: #eff6ff;
+}
+
+.site-box:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12);
+}
+
+.map-card {
+  background: #ffffff;
+}
+
+.india-map-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  background: #f8fbff;
+  border-radius: 0.75rem;
+  border: 1px solid #bfdbfe;
+  overflow: hidden;
+}
+
+.india-map {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.map-dot {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.dot-core {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: #2563eb;
+  box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.22);
+}
+
+.dot-label {
+  font-size: 11px;
+  line-height: 1.2;
+  white-space: nowrap;
+  font-weight: 600;
+  color: #1f2937;
+  background: #ffffff;
+  border: 1px solid #bfdbfe;
+  border-radius: 999px;
+  padding: 2px 7px;
+}
+
+.mobile-city-list {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .section-kicker {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+  }
+
+  .section-title {
+    font-size: 1.65rem;
+  }
+
+  .site-box {
+    min-height: 64px;
+  }
+
+  .site-box-accent {
+    min-height: 2rem;
+  }
+
+  .india-map-wrap {
+    aspect-ratio: 1 / 1;
+  }
+
+  .dot-label {
+    display: none;
+  }
+
+  .dot-core {
+    width: 8px;
+    height: 8px;
+  }
+
+  .mobile-city-list {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .mobile-city-list span {
+    font-size: 11px;
+    color: #1f2937;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+    padding: 3px 8px;
+    font-weight: 600;
+  }
+}
